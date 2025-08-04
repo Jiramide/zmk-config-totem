@@ -39,7 +39,7 @@ label= "BASE"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp B       &kp E       &kp H       &kp L       &bt BT_CLR      &kp T       &kp X       &kp B       &kp F       &kp I
+                &kp B       &kp E       &kp H       &kp L       &bt BT_CLR_ALL  &kp T       &kp X       &kp B       &kp F       &kp I
                 &kp C       &kp F       &kp I       &kp M       &kp Q           &kp U       &kp Y       &kp C       &kp G       &kp J
     &kp A       &kp D       &kp G       &kp J       &kp N       &kp R           &kp V       &kp Z       &kp D       &kp H       &kp K       &kp L
                                         &kp K       &kp O       &kp S           &kp W       &kp A       &kp E
