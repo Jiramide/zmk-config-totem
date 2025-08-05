@@ -39,20 +39,20 @@
 label= "BASE"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     B     ┃     E     ┃     H     ┃     L     ┃   BT_CLR  ┃   ┃     T     ┃     X     ┃     B     ┃     F     ┃     I     ┃
+//             ┃     Q     ┃     W     ┃     F     ┃     P     ┃     B     ┃   ┃     J     ┃     L     ┃     U     ┃     Y     ┃     '     ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃     C     ┃     F     ┃     I     ┃     M     ┃     Q     ┃   ┃     U     ┃     Y     ┃     C     ┃     G     ┃     J     ┃
+//             ┃     A     ┃     R     ┃     S     ┃     T     ┃     G     ┃   ┃     M     ┃     N     ┃     E     ┃     I     ┃     O     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃     A     ┃     D     ┃     G     ┃     J     ┃     N     ┃     R     ┃   ┃     V     ┃     Z     ┃     D     ┃     H     ┃     K     ┃     L     ┃
+// ┃    ESC    ┃     X     ┃     C     ┃     D     ┃     V     ┃     Z     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     ;     ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃    ___    ┃     O     ┃     S     ┃   ┃     W     ┃     A     ┃    ___    ┃
+//                                     ┃    ___    ┃   SPACE   ┃    NAV    ┃   ┃    SYM    ┃   BKSPC   ┃    ___    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
+                &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp QUOT
                 &kp A       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &kp O
-    &kp ESC     &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp SLASH   &kp ENTER
+    &kp ESC     &kp X       &kp C       &kp D       &kp V       &kp Z           &kp K       &kp H       &kp COMMA   &kp DOT     &kp SEMI    &kp ENTER
                                         &bt BT_CLR_ALL      &kp SPACE   &sl NAV         &sl SYM     &kp BSPC    &trans
                         >;
                 };
@@ -74,7 +74,7 @@ label= "SYM"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp ESC     &kp LBKT    &kp LBRC    &kp LPAR    &kp TILDE       &kp CARET   &kp RPAR    &kp RBRC    &kp RBKT    &kp GRAVE
-                &kp MINUS   &kp STAR    &kp EQUAL   &kp UNDER   &kp DOLLAR      &kp HASH    &kp RGUI    &kp RALT    &kp RCTRL   &kp RSHFT
+                &kp MINUS   &kp STAR    &kp EQUAL   &kp UNDER   &kp DOLLAR      &kp HASH    &sk RGUI    &sk RALT    &sk RCTRL   &sk RSHFT
     &trans      &kp PLUS    &kp PIPE    &kp AT      &kp SLASH   &kp PERCENT     &trans      &kp BSLH    &kp AMPS    &kp QMARK   &kp EXCL   &trans
                                         &trans      &trans      &trans          &trans      &trans      &trans 
                         >;
@@ -98,7 +98,7 @@ label= "NAV"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
-                &kp A       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &kp O
+                &sk LSHFT   &sk LCTRL   &sk LALT    &sk LGUI    &kp G           &kp M       &kp N       &kp E       &kp I       &kp O
     &kp ESC     &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp SLASH   &kp ENTER
                                         &kp K       &kp SPACE   &sl NAV         &sl SYM     &kp BACKSPACE       &kp A 
                         >;
@@ -112,9 +112,9 @@ label= "NUM"                               ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃     7     ┃     5     ┃     3     ┃     1     ┃     9     ┃   ┃     8     ┃     0     ┃     2     ┃     4     ┃     6     ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃     C     ┃     F     ┃     I     ┃     M     ┃     Q     ┃   ┃     U     ┃     Y     ┃     C     ┃     G     ┃     J     ┃
+//             ┃     C     ┃     F     ┃     I     ┃     M     ┃    FN11   ┃   ┃   FN12    ┃     Y     ┃     C     ┃     G     ┃     J     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃     A     ┃    FN7    ┃    FN5    ┃    FN3    ┃    FN1    ┃    FN9    ┃   ┃     V     ┃     Z     ┃     D     ┃     H     ┃     K     ┃     L     ┃
+// ┃     A     ┃    FN7    ┃    FN5    ┃    FN3    ┃    FN1    ┃    FN9    ┃   ┃    FN8    ┃   FN10    ┃    FN2    ┃    FN4    ┃    FN6    ┃     L     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃     K     ┃     O     ┃     S     ┃   ┃     W     ┃     A     ┃     E     ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -122,8 +122,8 @@ label= "NUM"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N7      &kp N5      &kp N3      &kp N1      &kp N9          &kp N8      &kp N0      &kp N2      &kp N4      &kp N6
-                &kp A       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &kp O
-    &kp ESC     &kp F7       &kp F5       &kp F3       &kp F1       &kp F9           &kp F8       &kp F10       &kp F2   &kp F4     &kp F6   &kp ENTER
+                &kp A       &kp R       &kp S       &kp T       &kp F11         &kp F12     &kp N       &kp E       &kp I       &kp O
+    &kp ESC     &kp F7      &kp F5      &kp F3      &kp F1      &kp F9          &kp F8      &kp F10     &kp F2      &kp F4      &kp F6   &kp ENTER
                                         &kp K       &kp SPACE   &sl NAV         &sl SYM     &kp BACKSPACE       &kp A 
                         >;
 
