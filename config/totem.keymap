@@ -97,9 +97,9 @@ label= "NAV"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
-                &sk LSHFT   &sk LCTRL   &sk LALT    &sk LGUI    &kp G           &kp M       &kp N       &kp E       &kp I       &kp O
-    &kp ESC     &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp SLASH   &kp ENTER
+                &kp TAB     &kp W       &kp F       &kp P       &kp B           &kp J       &kp HOME    &kp UP      &kp END     &kp SEMI
+                &sk LSHFT   &sk LCTRL   &sk LALT    &sk LGUI    &kp G           &kp M       &kp LEFT    &kp DOWN    &kp RIGHT   &kp O
+    &kp ESC     &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp PG_DN   &kp PG_UP   &kp DOT     &kp SLASH   &kp ENTER
                                         &kp K       &kp SPACE   &sl NAV         &sl SYM     &kp BACKSPACE       &kp A 
                         >;
 
