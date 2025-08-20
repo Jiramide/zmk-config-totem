@@ -33,6 +33,19 @@
               };
        };
 
+       behaviors {
+              msk: modifier_sticky_key {
+                     compatible = "zmk,behavior-sticky-key";
+                     #binding-cells = <1>;
+                     bindings = <&kp>;
+                     release-after-ms = <1000>;
+                     quick-release;
+                     ignore-modifiers;
+              };
+       };
+
+
+
         keymap {
                 compatible = "zmk,keymap";
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -77,7 +90,7 @@ label= "SYM"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp ESC     &kp LBKT    &kp LBRC    &kp LPAR    &kp TILDE       &kp CARET   &kp RPAR    &kp RBRC    &kp RBKT    &kp GRAVE
-                &kp MINUS   &kp STAR    &kp EQUAL   &kp UNDER   &kp DOLLAR      &kp HASH    &sk RGUI    &sk RALT    &sk RCTRL   &sk RSHFT
+                &kp MINUS   &kp STAR    &kp EQUAL   &kp UNDER   &kp DOLLAR      &kp HASH    &msk RGUI    &msk RALT    &msk RCTRL   &msk RSHFT
     &trans      &kp PLUS    &kp PIPE    &kp AT      &kp SLASH   &kp PERCENT     &trans      &kp BSLH    &kp AMPS    &kp QMARK   &kp EXCL   &trans
                                         &trans      &trans      &trans          &trans      &trans      &trans 
                         >;
@@ -89,7 +102,7 @@ label= "SYM"                               ;
 label= "NAV"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃    TAB    ┃     E     ┃  NXT_TAB  ┃  PRV_TAB  ┃  VOL_UP   ┃   ┃     T     ┃     X     ┃     B     ┃     F     ┃     I     ┃
+//             ┃    TAB    ┃     E     ┃  PRV_TAB  ┃  NXT_TAB  ┃  VOL_UP   ┃   ┃     T     ┃     X     ┃     B     ┃     F     ┃     I     ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃   LSHFT   ┃   LCTRL   ┃   LALT    ┃   LGUI    ┃  VOL_DN   ┃   ┃     U     ┃     Y     ┃     C     ┃     G     ┃     J     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
@@ -100,8 +113,8 @@ label= "NAV"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp TAB     &trans      &NXT_TAB    &PRV_TAB    &kp C_VOL_UP    &trans      &kp HOME    &kp UP      &kp END     &trans
-                &sk LSHFT   &sk LCTRL   &sk LALT    &sk LGUI    &kp C_VOL_DN    &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &trans
+                &kp TAB     &trans      &PRV_TAB    &NXT_TAB    &kp C_VOL_UP    &trans      &kp HOME    &kp UP      &kp END     &trans
+                &msk LSHFT   &msk LCTRL   &msk LALT    &msk LGUI    &kp C_VOL_DN    &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &trans
     &trans      &trans      &trans      &trans      &trans      &kp C_PP        &trans      &kp PG_DN   &kp PG_UP   &trans      &trans      &trans
                                         &trans      &kp SPACE   &sl NAV         &sl SYM     &kp BACKSPACE       &trans
                         >;
