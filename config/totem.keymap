@@ -21,6 +21,9 @@
 #define NAV 2
 #define NUM 3
 
+#define NXT_TAB kp LC(TAB)
+#define PRV_TAB kc LC(LS(TAB))
+
 / {
        conditional_layers {
               compatible = "zmk,conditional-layers";
@@ -53,7 +56,7 @@ label= "BASE"                              ;
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp QUOT
                 &kp A       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &kp O
     &kp ESC     &kp X       &kp C       &kp D       &kp V       &kp Z           &kp K       &kp H       &kp COMMA   &kp DOT     &kp SEMI    &kp ENTER
-                                        &bt BT_CLR_ALL      &kp SPACE   &sl NAV         &sl SYM     &kp BSPC    &trans
+                                        &trans      &kp SPACE   &sl NAV         &sl SYM     &kp BSPC    &trans
                         >;
                 };
 
@@ -86,21 +89,21 @@ label= "SYM"                               ;
 label= "NAV"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     B     ┃     E     ┃     H     ┃     L     ┃   BT_CLR  ┃   ┃     T     ┃     X     ┃     B     ┃     F     ┃     I     ┃
+//             ┃    TAB    ┃     E     ┃  NXT_TAB  ┃  PRV_TAB  ┃  VOL_UP   ┃   ┃     T     ┃     X     ┃     B     ┃     F     ┃     I     ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃     C     ┃     F     ┃     I     ┃     M     ┃     Q     ┃   ┃     U     ┃     Y     ┃     C     ┃     G     ┃     J     ┃
+//             ┃   LSHFT   ┃   LCTRL   ┃   LALT    ┃   LGUI    ┃  VOL_DN   ┃   ┃     U     ┃     Y     ┃     C     ┃     G     ┃     J     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃     A     ┃     D     ┃     G     ┃     J     ┃     N     ┃     R     ┃   ┃     V     ┃     Z     ┃     D     ┃     H     ┃     K     ┃     L     ┃
+// ┃    ESC    ┃     D     ┃     G     ┃     J     ┃     N     ┃PLAY/PAUSE ┃   ┃     V     ┃     Z     ┃     D     ┃     H     ┃     K     ┃     L     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃     K     ┃     O     ┃     S     ┃   ┃     W     ┃     A     ┃     E     ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp TAB     &kp W       &kp F       &kp P       &kp B           &kp J       &kp HOME    &kp UP      &kp END     &kp SEMI
-                &sk LSHFT   &sk LCTRL   &sk LALT    &sk LGUI    &kp G           &kp M       &kp LEFT    &kp DOWN    &kp RIGHT   &kp O
-    &kp ESC     &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp PG_DN   &kp PG_UP   &kp DOT     &kp SLASH   &kp ENTER
-                                        &kp K       &kp SPACE   &sl NAV         &sl SYM     &kp BACKSPACE       &kp A 
+                &kp TAB     &trans      &NXT_TAB    &PRV_TAB    &kp C_VOL_UP    &trans      &kp HOME    &kp UP      &kp END     &trans
+                &sk LSHFT   &sk LCTRL   &sk LALT    &sk LGUI    &kp C_VOL_DN    &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &trans
+    &trans      &trans      &trans      &trans      &trans      &kp C_PP        &trans      &kp PG_DN   &kp PG_UP   &trans      &trans      &trans
+                                        &trans      &kp SPACE   &sl NAV         &sl SYM     &kp BACKSPACE       &trans
                         >;
 
               };
