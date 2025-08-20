@@ -22,7 +22,7 @@
 #define NUM 3
 
 #define NXT_TAB kp LC(TAB)
-#define PRV_TAB kc LC(LS(TAB))
+#define PRV_TAB kp LC(LS(TAB))
 
 / {
        conditional_layers {
