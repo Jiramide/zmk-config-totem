@@ -61,7 +61,7 @@ label= "BASE"                              ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃    ESC    ┃     X     ┃     C     ┃     D     ┃     V     ┃     Z     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     ;     ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃    ___    ┃   SPACE   ┃    NAV    ┃   ┃    SYM    ┃   BKSPC   ┃    ___    ┃
+//                                     ┃ CAPS_WORD ┃   SPACE   ┃    NAV    ┃   ┃    SYM    ┃   BKSPC   ┃    ___    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -69,7 +69,7 @@ label= "BASE"                              ;
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp QUOT
                 &kp A       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &kp O
     &kp ESC     &kp X       &kp C       &kp D       &kp V       &kp Z           &kp K       &kp H       &kp COMMA   &kp DOT     &kp SEMI    &kp ENTER
-                                        &trans      &kp SPACE   &sl NAV         &sl SYM     &kp BSPC    &trans
+                                        &caps_word  &kp SPACE   &sl NAV         &sl SYM     &kp BSPC    &key_repeat
                         >;
                 };
 
@@ -90,7 +90,7 @@ label= "SYM"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp ESC     &kp LBKT    &kp LBRC    &kp LPAR    &kp TILDE       &kp CARET   &kp RPAR    &kp RBRC    &kp RBKT    &kp GRAVE
-                &kp MINUS   &kp STAR    &kp EQUAL   &kp UNDER   &kp DOLLAR      &kp HASH    &msk RGUI    &msk RALT    &msk RCTRL   &msk RSHFT
+                &kp MINUS   &kp STAR    &kp EQUAL   &kp UNDER   &kp DOLLAR      &kp HASH    &msk RGUI   &msk RALT   &msk RCTRL  &msk RSHFT
     &trans      &kp PLUS    &kp PIPE    &kp AT      &kp SLASH   &kp PERCENT     &trans      &kp BSLH    &kp AMPS    &kp QMARK   &kp EXCL   &trans
                                         &trans      &trans      &trans          &trans      &trans      &trans 
                         >;
@@ -114,8 +114,8 @@ label= "NAV"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp TAB     &trans      &PRV_TAB    &NXT_TAB    &kp C_VOL_UP    &trans      &kp HOME    &kp UP      &kp END     &trans
-                &msk LSHFT   &msk LCTRL   &msk LALT    &msk LGUI    &kp C_VOL_DN    &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &trans
-    &trans      &trans      &trans      &trans      &trans      &kp C_PP        &trans      &kp PG_DN   &kp PG_UP   &trans      &trans      &trans
+                &msk LSHFT  &msk LCTRL  &msk LALT   &msk LGUI   &kp C_VOL_DN    &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &trans
+    &trans      &trans      &trans      &trans      &trans      &kp C_PP        &kp PSCRN   &kp PG_DN   &kp PG_UP   &trans      &trans      &trans
                                         &trans      &kp SPACE   &sl NAV         &sl SYM     &kp BACKSPACE       &trans
                         >;
 
